@@ -316,6 +316,7 @@ nav
                     background: url(../icons/tick_red.png) center (center / cover) no-repeat
 
 .map
+    position: relative
     padding: 49px 0
     min-height: 717px
     background: url(../img/bg/finish_bg.jpg) center (center / cover) no-repeat
@@ -326,6 +327,9 @@ nav
     .subtitle
         @include subtitle_white
     &_link
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
         margin-top: 486px
         font-size: 15px
         line-height: 68px
@@ -357,7 +361,7 @@ footer
         width: 33%
         &:nth-child(3)
             display: flex
-            justify-content: end
+            justify-content: flex-end
     &_social
         width: 160px
         display: flex
@@ -370,7 +374,7 @@ footer
             height: 32px
             background-color: #070716
             border-radius: 100%
-            i
+            span
                 color: #ffffff
     &_links
         width: 390px
@@ -401,10 +405,7 @@ footer
             font-weight: 400
             text-transform: uppercase
             color: #1fbad6
-            text-align: center
-    &_mobile
-        position: absolute
-        right: 23px    
+            text-align: center 
 
 .xs-visible
     display: none
